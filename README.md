@@ -31,7 +31,7 @@ The dataset used contains **222,980 injury reports and 48 different event types*
 
 #### Model Parameters
 
-The **pretrained uncased BERT model** was used for the injury report classification task. The length of the **hidden state** was 786. A **dropout rate** of 0.3 was applied to the output state and a fully connected layer was added to output classification results. Each injury report was padded to the **max document length** of 150 tokens. **Batch size** was set at 16, with a **learning rate** of 0.00002 for model training. The learning rate was set to decrease linearly during the training stage, across training epochs and. **Cross entropy** was used as the loss function and **Adam** was used for model optimization. The BERT-based-model was trained for 10 epochs. For the Naïve Bayes model, the smoothing parameter of alpha was set to be 1. 
+The **pretrained uncased BERT model** was used for the injury report classification task. The length of the **hidden state** was 786. A **dropout rate** of .3 was applied to the output state and a fully connected layer was added to output classification results. Each injury report was padded to the **max document length** of 150 tokens. **Batch size** was set at 16, with a **learning rate** of .00002 for model training. The learning rate was set to decrease linearly during the training stage, across training epochs and. **Cross entropy** was used as the loss function and **Adam** was used for model optimization. The BERT-based-model was trained for 10 epochs. For the Naïve Bayes model, the smoothing parameter of alpha was set to be 1. 
 
 #### Model Performance
 
