@@ -20,3 +20,22 @@ The dataset used is from a competition organized by NASA-Tournament Lab and Nati
 
 The texts were turned into **lowercase** and **tokenized** using a BERT tokenizer. Pretrained **BERT-based model** provided by Hugging Face was used for the **injury report classification task**. The **baseline model** used for performance comparison is **Naïve Bayes**, which **classifies documents based on event probabilities and token probabilities given an event**. **The dataset was randomly split into training, development, and test dataset at a 8:1:1 ratio**.  BERT-based model is **finetuned on the training dataset**, **hyperparameters were optimized** using the **development set** and model **performance was evaluated on the test dataset**. For the Naïve Bayes model, model accuracy was evaluated both on the development and test dataset. 
 
+## Results
+
+#### Dataset Overview
+
+The dataset used contains **222,980 injury reports and 48 different event types**. The median count of labels is 724.5 (Interquartile range: 51.3-5100). Both datasets were split into training, development and testing datasets at a ratio of 8:1:1, resulting in 183,856, 22,982, 22,982 rows of dataset respectively. Figure 1 shows the distribution of event count in the real dataset, with over 30 thousand reports of event 71 and less than 100 reports for 18 labels. 
+
+<img width="667" alt="Event Distribution" src="https://github.com/halfmoonliu/InjuryNoteLabel/assets/46064664/7a315f96-1a29-4439-bde1-bf607cb585b8">
+
+#### Model Parameters
+
+The **pretrained uncased BERT model** was used for the injury report classification task. The length of the **hidden state** was 786. A **dropout rate** of 0.3 was applied to the output state and a fully connected layer was added to output classification results. Each injury report was padded to the **max document length** of 150 tokens. **Batch size** was set at 16, with a **learning rate** of 0.00002 for model training. The learning rate was set to decrease linearly during the training stage, across training epochs and. **Cross entropy** was used as the loss function and **Adam** was used for model optimization. The BERT-based-model was trained for 10 epochs. For the Naïve Bayes model, the smoothing parameter of alpha was set to be 1. 
+
+#### Model Performance
+
+| Dataset | BERT-Based | Naïve Bayes | 
+|---|---|---|
+| Test Set Accuract (%) | 86.79 | 73.14 |
+| Development Set Accuracy (%) | 86.99% | 73.13% |
+| Training Set Accuracy (%) | 95.83% | 75.26%  |
