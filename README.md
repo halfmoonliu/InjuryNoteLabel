@@ -37,5 +37,5 @@ The **pretrained uncased BERT model** was used for the injury report classificat
 | Dataset | BERT-Based | Naïve Bayes | 
 |---|---|---|
 | Test Set Accuract (%) | 86.79 | 73.14 |
-| Development Set Accuracy (%) | 86.99% | 73.13% |
-| Training Set Accuracy (%) | 95.83% | 75.26%  |
+| Development Set Accuracy (%) | 86.99 | 73.13 |
+| Training Set Accuracy (%) | 95.83 | 75.26  |
