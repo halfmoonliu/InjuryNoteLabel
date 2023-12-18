@@ -5,17 +5,17 @@ This repository demonstrates how to use **a transformer-based deep learning mode
 
 | Dataset | **BERT-Based** | Naïve Bayes | 
 |---|---|---|
-| **Test Set** Accuract (%) | **86.79** | 73.14 |
+| **Test Set** Accuracy (%) | **86.79** | 73.14 |
 | Development Set Accuracy (%) | 86.99 | 73.13 |
 | Training Set Accuracy (%) | 95.83 | 75.26  |
 
 ## Background
-Machine-aided **injury report classification** can **facilitate prompt diagnosis** of occupational injuries. Prompt identification and categorization of injuries can lead to **timely interventions and improved safety measures** targeted injury prevention efforts and resource allocation. The **automation of the task can reduce human workload and time needed for catagorization**. This project aims to **BERT-Based and Naïve Bayes** models to classify injunry reports and compare model performances. 
+Machine-aided **injury report classification** can **facilitate prompt diagnosis** of occupational injuries. Prompt identification and categorization of injuries can lead to **timely interventions and improved safety measures** targeted injury prevention efforts and resource allocation. The **automation of the task can reduce human workload and time needed for categorization**. This project aims to **BERT-Based and Naïve Bayes** models to classify injury reports and compare model performances. 
 
 ## Methods
 
 #### Dataset
-The dataset used is from a competition organized by NASA-Tournament Lab and National Institute for Occupational Safety & Health (NIOSH) to automate data processing in the occupational safety and health (OSH) surveillance systems. Specifically, **given a free text injury report**, such as "*worker fell from the ladder after reaching out for a box.*”, the task is to **assign an event type code** from the Occupational Injuries and Illnesses Classification System (OIICS). The details of the task and competition can be found in a [blogpost](https://blogs.cdc.gov/niosh-science-blog/2020/02/26/ai-crowdsourcing/) by CDC (Center for Disease Control). The dataset is downloaded from [hugging face](https://huggingface.co/datasets/mayerantoine/injury-narrative-coding). The winning solutions can be found on [NASA Tournament Lab's Github Page](https://github.com/NASA-Tournament-Lab/CDC-NLP-Occ-Injury-Coding).
+The dataset used is from a competition organized by NASA-Tournament Lab and National Institute for Occupational Safety & Health (NIOSH) to automate data processing in the occupational safety and health (OSH) surveillance systems. Specifically, **given a free text injury report**, such as "*worker fell from the ladder after reaching out for a box.*”, the task is to **assign an event type code** from the Occupational Injuries and Illnesses Classification System (OIICS). The details of the task and competition can be found in a [blogpost](https://blogs.cdc.gov/niosh-science-blog/2020/02/26/ai-crowdsourcing/) by CDC (Center for Disease Control). The dataset is downloaded from [hugging face](https://huggingface.co/datasets/mayerantoine/injury-narrative-coding). The winning solutions can be found on [NASA Tournament Lab's GitHub Page](https://github.com/NASA-Tournament-Lab/CDC-NLP-Occ-Injury-Coding).
 
 #### Examples
 
