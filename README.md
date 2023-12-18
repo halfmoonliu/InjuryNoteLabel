@@ -33,7 +33,7 @@ The texts were turned into **lowercase** and **tokenized** using a BERT tokenize
 
 #### Dataset Overview
 
-The dataset used contains **222,980 injury reports and 48 different event types**. The median count of labels is 724.5 (Interquartile range: 51.3-5100). Both datasets were split into training, development and testing datasets at a ratio of 8:1:1, resulting in 183,856, 22,982, 22,982 rows of dataset respectively. Figure 1 shows the distribution of event count in the real dataset, with over 30 thousand reports of event 71 and less than 100 reports for 18 labels. 
+The dataset used contains **222,980 injury reports and 48 different event types**. The median count of labels is 724.5 (Interquartile range: 51.3-5100). Both datasets were split into training, development and testing datasets at a ratio of 8:1:1, resulting in 183,856, 22,982, 22,982 rows of dataset respectively. The figure below shows the distribution of event count in the real dataset, with over 30 thousand reports of event 71 and less than 100 reports for 18 labels. 
 
 <img width="661" alt="Event Distribution" src="https://github.com/halfmoonliu/InjuryNoteLabel/assets/46064664/ca8bc831-1ead-466c-a4ed-90a2d5f728bf">
 
