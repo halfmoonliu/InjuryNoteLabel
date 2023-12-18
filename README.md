@@ -1,5 +1,13 @@
 # Classifying Injury Reports Using Transformer-Based Models
-This repository demonstrate how to use **a transformer-based deep learning model** to **classify injury narratives into 48 event types**. The **baseline model** for performance comparison is **Naïve Bayes**. The **BERT** (Bidirectional Encoder Representations from Transformers)**-based deep learning model** achieved a **test accuracy of** ***86.8 percent*** and the **Naïve Bayes** model achieved a **test accuracy of 73.1 percent**. @[halfmoonliu](https://github.com/halfmoonliu) (**Yun-Chung Liu**) contributed to **dataset preparation** and **BERT-based model training and evaluation**, @[Keonnartey](https://github.com/Keonnartey) (Keon Nartey) contributed to **Naïve Bayes model training and evaluation**
+This repository demonstrates how to use **a transformer-based deep learning model** to **classify injury narratives into 48 event types**. The **baseline model** for performance comparison is **Naïve Bayes**. The **BERT** (Bidirectional Encoder Representations from Transformers)**-based deep learning model** achieved a **test accuracy of** ***86.8 percent*** and the **Naïve Bayes** model achieved a **test accuracy of 73.1 percent**. @[halfmoonliu](https://github.com/halfmoonliu) (**Yun-Chung Liu**) contributed to **dataset preparation** and **BERT-based model training and evaluation**, @[Keonnartey](https://github.com/Keonnartey) (Keon Nartey) contributed to **Naïve Bayes model training and evaluation**
+
+#### Model Performance
+
+| Dataset | **BERT-Based** | Naïve Bayes | 
+|---|---|---|
+| **Test Set** Accuract (%) | **86.79** | 73.14 |
+| Development Set Accuracy (%) | 86.99 | 73.13 |
+| Training Set Accuracy (%) | 95.83 | 75.26  |
 
 ## Background
 Machine-aided **injury report classification** can **facilitate prompt diagnosis** of occupational injuries. Prompt identification and categorization of injuries can lead to **timely interventions and improved safety measures** targeted injury prevention efforts and resource allocation. The **automation of the task can reduce human workload and time needed for catagorization**. This project aims to **BERT-Based and Naïve Bayes** models to classify injunry reports and compare model performances. 
@@ -7,7 +15,7 @@ Machine-aided **injury report classification** can **facilitate prompt diagnosis
 ## Methods
 
 #### Dataset
-The dataset used is from a competition organized by NASA-Tournament Lab and National Institute for Occupational Safety & Health (NIOSH) to automate data processing in the occupational safety and health (OSH) surveillance systems. Specifically, **given a free text injury report**, such as "*worker fell from the ladder after reaching out for a box.*” , the task is to **assign an event type code** from the Occupational Injuries and Illnesses Classification System (OIICS). The details of the task and competition can be found in a [blogpost](https://blogs.cdc.gov/niosh-science-blog/2020/02/26/ai-crowdsourcing/) by CDC (Center for Disease Control). The dataset is downloaded from [hugging face](https://huggingface.co/datasets/mayerantoine/injury-narrative-coding). The winning solutions can be found on [NASA Tournament Lab's Github Page](https://github.com/NASA-Tournament-Lab/CDC-NLP-Occ-Injury-Coding).
+The dataset used is from a competition organized by NASA-Tournament Lab and National Institute for Occupational Safety & Health (NIOSH) to automate data processing in the occupational safety and health (OSH) surveillance systems. Specifically, **given a free text injury report**, such as "*worker fell from the ladder after reaching out for a box.*”, the task is to **assign an event type code** from the Occupational Injuries and Illnesses Classification System (OIICS). The details of the task and competition can be found in a [blogpost](https://blogs.cdc.gov/niosh-science-blog/2020/02/26/ai-crowdsourcing/) by CDC (Center for Disease Control). The dataset is downloaded from [hugging face](https://huggingface.co/datasets/mayerantoine/injury-narrative-coding). The winning solutions can be found on [NASA Tournament Lab's Github Page](https://github.com/NASA-Tournament-Lab/CDC-NLP-Occ-Injury-Coding).
 
 #### Examples
 
@@ -34,10 +42,4 @@ The dataset used contains **222,980 injury reports and 48 different event types*
 
 The **pretrained uncased BERT model** was used for the injury report classification task. The length of the **hidden state** was 786. A **dropout rate** of .3 was applied to the output state and a fully connected layer was added to output classification results. Each injury report was padded to the **max document length** of 150 tokens. **Batch size** was set at 16, with a **learning rate** of .00002 for model training. The learning rate was set to decrease linearly during the training stage, across training epochs and. **Cross entropy** was used as the loss function and **Adam** was used for model optimization. The BERT-based-model was trained for 10 epochs. For the Naïve Bayes model, the smoothing parameter of alpha was set to be 1. 
 
-#### Model Performance
 
-| Dataset | BERT-Based | Naïve Bayes | 
-|---|---|---|
-| Test Set Accuract (%) | 86.79 | 73.14 |
-| Development Set Accuracy (%) | 86.99 | 73.13 |
-| Training Set Accuracy (%) | 95.83 | 75.26  |
